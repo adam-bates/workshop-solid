@@ -8,7 +8,7 @@ class CustomerEmailer implements Emailer <Customer> {
         emailService = new AwesomeEmailService();
     }
   
-    public void send(Customer customer) {
+    public void sendTo(Customer customer) {
         emailService.sendEmail(
               customer.getEmailAddress(),
               String.format("Hello, %s %s!", customer.getFirstName(), customer.getLastName()),
