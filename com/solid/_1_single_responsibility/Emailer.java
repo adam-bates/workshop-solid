@@ -2,16 +2,31 @@ package com.solid._1_single_responsibility;
 
 class Emailer {
     
+    private AwesomeEmailService emailService;
+    
+    public Emailer() {
+        emailService = new AwesomeEmailService();
+    }
+    
     public void send(Emailable emailable) {
         if (emailable instanceof Employee)
-            System.out.println(String.format("Sending employee email to %s %s (%s) ...",
-                emailable.getFirstName(), emailable.getLastName(), emailable.getEmailAddress()));
+            emailService.sendEmail(
+                emailable.getEmailAddress(),
+                String.format("%s %s", emailble.getFirstName(), emailable.getLastName()),
+                String.format("%s,\nWe wanted to say thanks for all of the hard work you do for our company!", emailable.getFirstName())
+            );
       
         else if (emailable instanceof Customer)
-            System.out.println(String.format("Sending customer email to %s %s (%s) ...",
-                emailable.getFirstName(), emailable.getLastName(), emailable.getEmailAddress()));
+            emailService.sendEmail(
+                emailable.getEmailAddress(),
+                String.format("Hello, %s %s!", emailble.getFirstName(), emailble.getLastName()),
+                String.format("%s,\nThanks for being a loyal customer!", emailble.getFirstName())
+            );
       
-        else System.out.println(String.format("Sending generic email to %s %s (%s) ...",
-            emailable.getFirstName(), emailable.getLastName(), emailable.getEmailAddress()));
+        else emailService.sendEmail(
+            emailable.getEmailAddress(),
+            String.format("Hello, %s %s!", emailble.getFirstName(), emailble.getLastName()),
+            String.format("%s,\nThis is a generic email.", emailble.getFirstName())
+        );
     }
 }
