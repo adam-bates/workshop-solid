@@ -1,6 +1,8 @@
 package com.solid._0_original;
 
 class Customer extends Model implements Emailable {
+    
+    private AwesomeEmailService emailService;
 
     // attributes
     private long id;
@@ -10,6 +12,9 @@ class Customer extends Model implements Emailable {
     
     // constructor
     public Customer(long id, String firstName, String lastName, String emailAddress) {
+        
+        emailService = new AwesomeEmailService();
+        
         setId(id);
         setFirstName(firstName);
         setLastName(lastName);
@@ -34,7 +39,10 @@ class Customer extends Model implements Emailable {
     }
     
     public void sendEmail() {
-        // send email to customer
-        System.out.println(String.format("Sending customer email to %s %s (%s)", firstName, lastName, emailAddress));
+        emailService.sendEmail(
+            customer.getEmailAddress(),
+            String.format("Hello, %s %s!", customer.getFirstName(), customer.getLastName()),
+            String.format("%s,\nThanks for being a loyal customer!", customer.getFirstName())
+        );
     }
 }
