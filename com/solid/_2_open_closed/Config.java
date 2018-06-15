@@ -20,7 +20,7 @@ final class Config extends Model {
     public String getToken() { return token; }
     public int getPort() { return port; }
     
-    // Config values shouldn't be saved from application
+    // config values shouldn't be saved from application
     public boolean save() {
         throw new UnsupportedOperationException();
     }
