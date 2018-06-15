@@ -1,4 +1,4 @@
-package com.solid.original;
+package com.solid._0_original;
 
 public class Test {
 
