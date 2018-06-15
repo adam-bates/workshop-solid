@@ -1,4 +1,4 @@
-package com.solid._1_srp;
+package com.solid._1_single_responsibility;
 
 class EmployeeEmailer {
     
