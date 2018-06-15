@@ -1,4 +1,4 @@
-spackage com.solid._1_single_responsibility;
+package com.solid._1_single_responsibility;
 
 class Customer extends Model implements Emailable {
 
