@@ -38,7 +38,10 @@ class Employee extends Model implements Emailable {
     }
 
     public void sendEmail() {
-        // send email to employee
-        System.out.println(String.format("Sending employee email to %s %s (%s) ...", firstName, lastName, emailAddress));
+        emailService.sendEmail(
+            emailAddress,
+            String.format("%s %s", firstName, lastName),
+            String.format("%s,\nWe wanted to say thanks for all of the hard work you do for our company!", firstName)
+        );
     }
 }
