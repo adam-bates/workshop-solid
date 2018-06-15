@@ -29,12 +29,14 @@ class Customer extends DBModel <Customer> implements Emailable {
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
   
     public boolean save() {
-        // Save customer to db
+        System.out.println("Saving customer to db...\n");
+        // save customer to db
         return true;
     }
     
     public Customer refresh() {
-        // Refresh Customer
+        System.out.println("Refreshing customer from db...\n");
+        // refresh customer
         return this;
     }
 }
