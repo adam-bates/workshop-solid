@@ -29,7 +29,7 @@ class Employee {
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
   
     public boolean save() {
-        // Save to db
+        // Save employee to db
         return true;
     }
 }
