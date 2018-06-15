@@ -23,10 +23,6 @@ class Emailer {
                 String.format("%s,\nThanks for being a loyal customer!", emailble.getFirstName())
             );
       
-        else emailService.sendEmail(
-            emailable.getEmailAddress(),
-            String.format("Hello, %s %s!", emailble.getFirstName(), emailble.getLastName()),
-            String.format("%s,\nThis is a generic email.", emailble.getFirstName())
-        );
+        else throw new IllegalArgumentException();
     }
 }
