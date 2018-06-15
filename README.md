@@ -25,6 +25,7 @@ Essentially, only add methods to interfaces or abstract classes if every child e
 
 ### Dependency Inversion Principle (DIP)
 > A. High-level modules should not depend on low-level modules. Both should depend on abstractions.
+>
 > B. Abstractions should not depend on details. Details should depend on abstractions.
 
 Not the same as *dependency injection*, but this principle does usually use *dependency injection*. Essentially all it's saying is your abstract classes and interfaces should only require the use of other abstract classes or interfaces, not concrete classes. And your implementation of classes should be requiring abstract classes or interfaces.
