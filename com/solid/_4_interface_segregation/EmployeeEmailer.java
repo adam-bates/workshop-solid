@@ -2,7 +2,11 @@ package com.solid._4_interface_segregation;
 
 class EmployeeEmailer implements Emailer <Employee> {
   
-    private AwesomeEmailService emailService = new AwesomeEmailService();
+    private EmailService emailService;
+    
+    public EmployeeEmailer() {
+        emailService = new AwesomeEmailService();
+    }
   
     public void send(Employee employee) {
         emailService.sendEmail(
