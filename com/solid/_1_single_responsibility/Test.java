@@ -6,9 +6,11 @@ public class Test {
         Emailer emailer = new Emailer();
 
         Employee employee = new Employee(101L, "John", "Smith", "jsmith@example.com");
-        emailer.send(employee);
+        if (employee.save())
+            emailer.send(employee);
 
         Customer customer = new Customer(201L, "Jane", "Doe", "jane@janedoe.ca");
-        emailer.send(customer);
+        if (customer.save())
+            emailer.send(customer);
     }
 }
