@@ -1,6 +1,6 @@
 package com.solid._3_liskov_substitution;
 
-class Employee extends DBModel implements Emailable {
+class Employee extends DBModel <Employee> implements Emailable {
 
     // attributes
     private long id;
@@ -31,5 +31,10 @@ class Employee extends DBModel implements Emailable {
     public boolean save() {
         // Save employee to db
         return true;
+    }
+    
+    public Employee refersh() {
+        // refersh Employee
+        return this;
     }
 }
