@@ -28,5 +28,6 @@ class Employee {
 
     public void sendEmail() {
         // send email to employee
+        System.out.println(String.format("Sending email to %s %s (%s) ...", firstName, lastName, emailAddress));
     }
 }
