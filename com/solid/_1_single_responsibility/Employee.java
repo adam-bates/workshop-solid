@@ -10,19 +10,21 @@ class Employee {
     
     // constructor
     public Employee(long id, String firstName, String lastName, String emailAddress) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailAddress = emailAddress;
+        setId(id);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmailAddress(emailAddress);
     }
 
     // accessors
-    public long getId() { return this.id; }
-    public String getFirstName() { return this.firstName; }
-    public String getLastName() { return this.lastName; }
+    public long getId() { return id; }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getEmailAddress() { return emailAddress; }
     
     // mutators
     public void setId(long id) { this.id = id; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
 }
