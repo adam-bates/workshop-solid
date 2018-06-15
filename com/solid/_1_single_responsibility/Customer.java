@@ -1,6 +1,6 @@
 package com.solid._1_single_responsibility;
 
-class Customer implements Emailable {
+class Customer extends Model implements Emailable {
 
     // attributes
     private long id;
