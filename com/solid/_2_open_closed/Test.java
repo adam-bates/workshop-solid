@@ -14,5 +14,11 @@ public class Test {
         Customer customer = new Customer(201L, "Jane", "Doe", "jane@janedoe.ca");
         if (customer.save())
             custEmailer.sendTo(customer);
+        
+        try {
+            new Config().save();
+        } catch (UnsupportedOperationException e) {
+            System.out.println("Config cannot be saved");
+        }
     }
 }
