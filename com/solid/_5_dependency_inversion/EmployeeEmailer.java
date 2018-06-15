@@ -4,8 +4,8 @@ class EmployeeEmailer implements Emailer <Employee> {
   
     private EmailService emailService;
     
-    public EmployeeEmailer() {
-        emailService = new AwesomeEmailService();
+    public EmployeeEmailer(EmailService emailService) {
+        this.emailService = emailService;
     }
   
     public void send(Employee employee) {
