@@ -32,3 +32,9 @@ class Customer implements Emailable {
         // Save customer to db
         return true;
     }
+    
+    public void sendEmail() {
+        // send email to customer
+        System.out.println(String.format("Sending customer email to %s %s (%s)", firstName, lastName, emailAddress));
+    }
+}
