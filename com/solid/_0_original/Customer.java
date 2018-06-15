@@ -12,7 +12,6 @@ class Customer extends Model implements Emailable {
     
     // constructor
     public Customer(long id, String firstName, String lastName, String emailAddress) {
-        
         emailService = new AwesomeEmailService();
         
         setId(id);
