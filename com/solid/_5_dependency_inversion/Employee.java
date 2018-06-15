@@ -29,13 +29,13 @@ class Employee extends DBModel <Employee> implements Emailable {
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
   
     public boolean save() {
-        System.out.println("Saving employee to db...");
+        System.out.println("Saving employee to db...\n");
         // Save employee to db
         return true;
     }
     
     public Employee refresh() {
-        System.out.println("Refreshing employee from db...");
+        System.out.println("Refreshing employee from db...\n");
         // refresh employee
         return this;
     }
