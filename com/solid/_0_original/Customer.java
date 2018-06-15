@@ -1,3 +1,4 @@
+
 package com.solid._0_original;
 
 class Customer extends Model implements Emailable {
@@ -33,7 +34,8 @@ class Customer extends Model implements Emailable {
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
   
     public boolean save() {
-        // Save customer to db
+        System.out.println("Saving employee to db...");
+        // save customer to db
         return true;
     }
     
