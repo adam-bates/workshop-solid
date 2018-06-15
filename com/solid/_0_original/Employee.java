@@ -1,6 +1,8 @@
 package com.solid._0_original;
 
 class Employee extends Model implements Emailable {
+    
+    private AwesomeEmailService emailService;
 
     // attributes
     private long id;
@@ -10,6 +12,8 @@ class Employee extends Model implements Emailable {
     
     // constructor
     public Employee(long id, String firstName, String lastName, String emailAddress) {
+        emailService = new AwesomeEmailService();
+        
         setId(id);
         setFirstName(firstName);
         setLastName(lastName);
