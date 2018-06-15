@@ -8,7 +8,7 @@ class EmployeeEmailer implements Emailer <Employee> {
         this.emailService = emailService;
     }
   
-    public void send(Employee employee) {
+    public void sendTo(Employee employee) {
         emailService.sendEmail(
             employee.getEmailAddress(),
             String.format("%s %s", employee.getFirstName(), employee.getLastName()),
