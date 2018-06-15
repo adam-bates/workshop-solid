@@ -1,6 +1,6 @@
 package com.solid._4_interface_segregation;
 
-class Customer extends DBModel implements Emailable {
+class Customer extends DBModel <Customer> implements Emailable {
 
     // attributes
     private long id;
@@ -31,5 +31,10 @@ class Customer extends DBModel implements Emailable {
     public boolean save() {
         // Save customer to db
         return true;
+    }
+    
+    public Customer refresh() {
+        // refresh Customer
+        return this;
     }
 }
