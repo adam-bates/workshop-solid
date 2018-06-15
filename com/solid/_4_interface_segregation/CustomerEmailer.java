@@ -6,6 +6,7 @@ class CustomerEmailer implements Emailer <Customer> {
   
     public CustomerEmailer(CustomEmailService emailService) {
         this.emailService = emailService;
+    }
   
     public void send(Customer customer) {
         emailService.sendEmail(
