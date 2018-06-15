@@ -1,4 +1,4 @@
-pacakge com.solid._1_single_responsibility;
+package com.solid._1_single_responsibility;
 
 public class Test {
   
