@@ -1,6 +1,6 @@
 package com.solid._2_open_closed;
 
-class Employee {
+class Employee extends Model implements Emailable {
 
     // attributes
     private long id;
