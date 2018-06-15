@@ -27,4 +27,9 @@ class Employee {
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
+  
+    public boolean save() {
+        // Save to db
+        return true;
+    }
 }
