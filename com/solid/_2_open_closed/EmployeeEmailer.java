@@ -2,6 +2,12 @@ package com.solid._2_open_closed;
 
 class EmployeeEmailer implements Emailer <Employee> {
     
+    private AwesomeEmailService emailService;
+    
+    public EmployeeEmailer() {
+        emailService = new AwesomeEmailService();
+    }
+    
     public void send(Employee employee) {
         emailService.sendEmail(
             employee.getEmailAddress(),
