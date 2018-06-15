@@ -1,6 +1,6 @@
 package com.solid._4_interface_segregation;
 
-class EmailService {
+class CustomEmailService implements EmailService {
 
     public void sendEmail(String address, String subject, String message) {
         // send email
