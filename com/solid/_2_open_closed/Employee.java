@@ -29,7 +29,8 @@ class Employee extends Model implements Emailable {
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
   
     public boolean save() {
-        // Save employee to db
+        System.out.println("Saving employee to db...");
+        // save employee to db
         return true;
     }
 }
