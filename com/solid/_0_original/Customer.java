@@ -1,4 +1,3 @@
-
 package com.solid._0_original;
 
 class Customer extends Model implements Emailable {
