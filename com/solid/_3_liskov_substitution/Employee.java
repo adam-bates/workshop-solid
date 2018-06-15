@@ -33,8 +33,8 @@ class Employee extends DBModel <Employee> implements Emailable {
         return true;
     }
     
-    public Employee refersh() {
-        // refersh Employee
+    public Employee refresh() {
+        // refresh Employee
         return this;
     }
 }
