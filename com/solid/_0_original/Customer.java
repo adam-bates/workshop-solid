@@ -29,6 +29,6 @@ class Customer {
     public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
   
     public boolean save() {
-        // Save to customer db
+        // Save customer to db
         return true;
     }
