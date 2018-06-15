@@ -39,9 +39,9 @@ class Customer extends Model implements Emailable {
     
     public void sendEmail() {
         emailService.sendEmail(
-            customer.getEmailAddress(),
-            String.format("Hello, %s %s!", customer.getFirstName(), customer.getLastName()),
-            String.format("%s,\nThanks for being a loyal customer!", customer.getFirstName())
+            emailAddress,
+            String.format("Hello, %s %s!", firstName, lastName),
+            String.format("%s,\nThanks for being a loyal customer!", firstName)
         );
     }
 }
